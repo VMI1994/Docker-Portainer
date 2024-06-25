@@ -8,6 +8,8 @@ read junk
 sudo apt install -y docker.io docker-compose
 sudo systemctl enable docker
 sudo systemctl start docker
+sudo service docker start &
+sudo service docker enable &
 sleep 3
 sudo usermod -aG docker $USER
 sudo docker volume create portainer_data
