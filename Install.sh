@@ -5,7 +5,7 @@ echo "This script will install docker and portainer"
 echo "Press enter to begin or ctrl+c to exit"
 read junk
 
-sudo apt install docker.io docker-compose
+sudo apt install -y docker.io docker-compose
 sudo systemctl enable docker
 sudo systemctl start docker
 sleep 3
