@@ -30,6 +30,8 @@ sudo usermod -aG docker $USER
 sudo docker volume create portainer_data
 sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 clear
+sudo docker run  -v /var/run/docker.sock:/var/run/docker.sock --name upgrade-images containrrr/watchtower --run-once
+clear
 echo "We will now check running docker containers"
 sudo docker ps
 sleep 2
