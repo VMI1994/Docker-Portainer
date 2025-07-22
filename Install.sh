@@ -34,11 +34,9 @@ sudo docker run  -v /var/run/docker.sock:/var/run/docker.sock --name upgrade-ima
 clear
 echo "We will now check running docker containers"
 sudo docker ps
-sleep 2
-
-echo "a reboot is needed for all changes to take effect."
-echo "The system will reboot in 10 seconds"
-echo "press ctrl+c to prevent reboot now"
-sleep 10
-sudo reboot now &
+echo \n\n\n
+if [ $? == 0];
+  echo "Docker Install Successful"
+else:
+  echo "Docker Install Failed"
 exit
