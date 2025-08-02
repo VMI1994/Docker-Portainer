@@ -42,9 +42,10 @@ sleep 2
 
 # Check install
 which docker > /dev/null
-if [ $? == 0];
+if [ $? == 0]
+then
   echo "Docker Install Successful"
-else;
+else
   echo "Docker Install Failed"
 fi
 exit
