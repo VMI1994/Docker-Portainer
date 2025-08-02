@@ -41,11 +41,13 @@ sudo docker run  -v /var/run/docker.sock:/var/run/docker.sock --name upgrade-ima
 clear
 echo "We will now check running docker containers"
 sudo docker ps
-echo ""
-echo ""
-echo ""
+sleep 2
+
+# Check install
+which docker > /dev/null
 if [ $? == 0];
   echo "Docker Install Successful"
 else:
   echo "Docker Install Failed"
+fi
 exit
