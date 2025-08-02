@@ -5,10 +5,7 @@ echo "This script will install docker and portainer"
 echo "Press enter to begin or ctrl+c to exit"
 read junk
 
-# Update the system
-echo "Updating the system"
-sleep 2
-sudo apt-get update
+# Install curl
 sudo apt install -y curl
 
 # Install Docker
