@@ -7,11 +7,11 @@ read junk
 
 # Update the system
 sudo apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 sudo apt install -y curl
 
 # Install Docker
 curl -fsSL https://get.docker.com -o get-docker.sh
+exit
 #sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo systemctl enable docker
 sudo systemctl start docker
