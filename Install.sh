@@ -41,6 +41,7 @@ sudo docker ps
 sleep 2
 
 # Check install
+clear
 which docker > /dev/null
 if [ $? == 0 ]
 then
@@ -48,4 +49,5 @@ then
 else
   echo "Docker Install Failed"
 fi
+sleep 2
 exit
