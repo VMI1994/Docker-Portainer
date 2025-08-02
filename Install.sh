@@ -12,7 +12,7 @@ sudo apt install -y curl
 
 # Install Docker
 curl -fsSL https://get.docker.com -o get-docker.sh
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+#sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo systemctl enable docker
 sudo systemctl start docker
 sudo service docker start
