@@ -32,7 +32,7 @@ sleep 2
 sudo docker volume create portainer_data
 sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 clear
-sudo docker run  -d -v /var/run/docker.sock:/var/run/docker.sock --name upgrade-images containrrr/watchtower
+sudo docker run  -d -v /var/run/docker.sock:/var/run/docker.sock --name watchtower containrrr/watchtower
 
 # Check Containers
 clear
