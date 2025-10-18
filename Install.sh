@@ -42,14 +42,17 @@ if [ $option == "y" ]
 then
     sudo docker run -d -p 3000:8080 -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:ollama
     sudo docker exec -it open-webui ollama pull gemma3:1b
-    sudo docker exec -it open-webui apt install -y net-tools
-    clear && "OpenWebUI is available at "$(ifconfig | grep '172' | grep -v flags | awk '{print $2}')":3000"
+    clear && "OpenWebUI is available at http://127.0.0.1:3000"
 fi
 
 # Check Containers
+echo ""
+echo ""
 echo "We will now check running docker containers"
-sudo docker ps
 sleep 2
+sudo docker ps
+echo ""
+echo ""
 
 # Check install
 which docker > /dev/null
