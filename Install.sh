@@ -33,6 +33,13 @@ sudo docker volume create portainer_data
 sudo docker run -d -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 clear
 sudo docker run  -d -v /var/run/docker.sock:/var/run/docker.sock --name watchtower containrrr/watchtower
+clear
+echo "Do you want to install Artificial Intelligence (y/N)"
+read option
+if [ $option == "y" ]
+then
+    sudo docker run -d -p 3000:8080 -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:ollama
+fi
 
 # Check Containers
 clear
