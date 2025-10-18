@@ -41,8 +41,9 @@ read option
 if [ $option == "y" ]
 then
     sudo docker run -d -p 3000:8080 -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:ollama
-    sudo docker exec ghcr.io/open-webui/open-webui:ollama ollama pull gemma3:1b
-    sudo apt install -y figlet && clear && figlet "OpenWebUI is available at "$(ip a | grep '172' | grep -v flags | awk '{print $2}')":3000"
+    sudo docker exec -it ghcr.io/open-webui/open-webui:ollama ollama pull gemma3:1b
+    sudo docker exec -it ghcr.io/open-webui/open-webui:ollama apt install -y net-tools
+    clear && "OpenWebUI is available at "$(ip a | grep '172' | grep -v flags | awk '{print $2}')":3000"
 fi
 
 # Check Containers
