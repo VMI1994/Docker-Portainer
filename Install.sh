@@ -25,6 +25,15 @@ sudo service docker start
 sudo service docker enable
 sudo usermod -aG docker $USER
 
+# Install docker desktop if gui present
+ls /usr/bin/*session > /dev/null
+if [ $? == 0 ]
+then
+    sudo apt install -y wget
+    wget https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
+    sudo apt install -y ./*.deb
+fi
+
 # Install portainer and watchtower
 clear
 echo "Install portainer and watchtower"
