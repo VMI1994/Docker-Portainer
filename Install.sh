@@ -34,6 +34,8 @@ then
     sudo apt install -y ./docker-desktop-amd64.deb
     sudo rm /etc/xdg/systemd/user/docker-desktop.service
     sudo systemctl --user enable docker-desktop
+    echo "start Docker desktop an wait for startup to complete before hitting enter to continue"
+    read pause
 fi
 
 # Install portainer and watchtower
