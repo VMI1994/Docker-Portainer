@@ -32,6 +32,8 @@ then
     sudo apt install -y wget
     wget https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb
     sudo apt install -y ./docker-desktop-amd64.deb
+    sudo rm /etc/xdg/systemd/user/docker-desktop.service
+    sudo systemctl --user enable docker-desktop
 fi
 
 # Install portainer and watchtower
