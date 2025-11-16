@@ -30,8 +30,8 @@ ls /usr/bin/*session > /dev/null
 if [ $? == 0 ]
 then
     sudo apt install -y wget
-    wget https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
-    sudo apt install -y ./*.deb
+    wget https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb
+    sudo apt install -y ./docker-desktop-amd64.deb
 fi
 
 # Install portainer and watchtower
