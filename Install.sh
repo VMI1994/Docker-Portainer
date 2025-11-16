@@ -34,6 +34,7 @@ then
     sudo apt install -y ./docker-desktop-amd64.deb
     sudo rm /etc/xdg/systemd/user/docker-desktop.service
     sudo systemctl --user enable docker-desktop
+    clear
     echo "start Docker desktop an wait for startup to complete before hitting enter to continue"
     read pause
 fi
@@ -59,6 +60,7 @@ then
 fi
 
 # Check Containers
+clear
 echo ""
 echo ""
 echo "We will now check running docker containers"
